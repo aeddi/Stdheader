@@ -6,10 +6,15 @@
 "    By: zaz <zaz@staff.42.fr>                      +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2013/06/15 12:45:56 by zaz               #+#    #+#              "
-"    Updated: 2013/07/26 16:59:00 by zaz              ###   ########.fr        "
+"    Updated: 2015/01/26 10:52:30 by aeddi            ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
+
+if exists("b:Stdheader_loaded")
+   finish
+endif
+let b:Stdheader_loaded = 1
 
 let s:asciiart = [
 			\"        :::      ::::::::",
