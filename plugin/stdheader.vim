@@ -6,15 +6,15 @@
 "    By: zaz <zaz@staff.42.fr>                      +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2013/06/15 12:45:56 by zaz               #+#    #+#              "
-"    Updated: 2015/01/26 10:52:30 by aeddi            ###   ########.fr        "
+"    Updated: 2015/01/26 10:53:57 by aeddi            ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
 
-if exists("b:Stdheader_loaded")
-   finish
+if exists("g:stdheader_plugin_loaded")
+	finish
 endif
-let b:Stdheader_loaded = 1
+let g:stdheader_plugin_loaded = 1
 
 let s:asciiart = [
 			\"        :::      ::::::::",
@@ -192,5 +192,6 @@ function s:update ()
 endfunction
 
 command Stdheader call s:insert ()
+autocmd BufNewFile *.{c,cpp,h,hpp} :Stdheader	"Insert 42 header < Must be after template autocmd
 nmap <F1> :Stdheader<CR>
 autocmd BufWritePre * call s:update ()
